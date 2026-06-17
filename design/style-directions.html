@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>YEP — Direcciones de diseño</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Playfair+Display:wght@500;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;600;800;900&family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{ --maxw: 1040px; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Manrope',sans-serif;
+    background:#0b0b0e; color:#e9e9ec;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  .page{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+
+  /* ---------- intro ---------- */
+  .intro{ padding:96px 0 56px; }
+  .kicker{ font-family:'Space Mono',monospace; font-size:13px; letter-spacing:.28em; text-transform:uppercase; color:#8b8b93; }
+  .intro h1{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(40px,7vw,76px); line-height:1.02; letter-spacing:-.02em; margin:18px 0 20px; }
+  .intro p{ max-width:560px; color:#a9a9b2; font-size:17px; }
+  .nav{ display:flex; flex-wrap:wrap; gap:10px; margin-top:34px; }
+  .nav a{ font-family:'Space Mono',monospace; font-size:12px; letter-spacing:.08em; text-decoration:none; color:#cfcfd6; border:1px solid #2a2a32; padding:9px 14px; border-radius:999px; transition:.2s; }
+  .nav a:hover{ background:#fff; color:#0b0b0e; border-color:#fff; }
+
+  /* ---------- option shell ---------- */
+  .opt{ padding:72px 0; border-top:1px solid #1c1c22; }
+  .opt-head{ display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:8px; }
+  .opt-num{ font-family:'Space Mono',monospace; font-size:13px; color:#6f6f78; }
+  .opt-name{ font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:#8b8b93; font-family:'Space Mono',monospace; }
+  .opt-vibe{ font-size:18px; color:#bdbdc6; max-width:620px; margin-bottom:30px; }
+
+  .stage{ border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,.08); }
+  .stage .hero{ padding:64px 48px; position:relative; overflow:hidden; }
+  .meta{ display:grid; grid-template-columns:1fr 1fr; gap:0; }
+  .meta > div{ padding:26px 32px; }
+  .meta .swatches{ display:flex; gap:0; border-radius:10px; overflow:hidden; height:46px; margin-top:14px; }
+  .meta .swatches span{ flex:1; }
+  .lbl{ font-family:'Space Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; opacity:.6; }
+  .type-row{ margin-top:8px; }
+  .type-row .big{ font-size:30px; line-height:1.1; }
+  .type-row .small{ font-size:14px; margin-top:6px; opacity:.7; }
+
+  /* logo lockup helper */
+  .lockup{ display:inline-flex; align-items:center; gap:18px; }
+  .mark{ display:inline-flex; align-items:center; justify-content:center; }
+
+  /* ===== 1. LAUNCHPAD ===== */
+  #d1 .hero{ background:#0c0d10; }
+  #d1 .glow{ position:absolute; inset:0; background:radial-gradient(120% 90% at 78% 12%, rgba(214,255,63,.16), transparent 55%); }
+  #d1 .wm{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:108px; letter-spacing:-.04em; color:#f4f4f0; line-height:1; position:relative; }
+  #d1 .wm b{ color:#d6ff3f; }
+  #d1 .dot{ display:inline-block; width:18px; height:18px; border-radius:50%; background:#d6ff3f; margin-left:6px; vertical-align:8px; }
+  #d1 .tag{ font-family:'Space Mono',monospace; color:#9a9a86; letter-spacing:.2em; font-size:13px; margin-top:18px; }
+  #d1 .meta{ background:#101116; }
+  #d1 .display-s{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; }
+  #d1 .body-s{ font-family:'Hanken Grotesk',sans-serif; }
+
+  /* ===== 2. MEDITERRANEO ===== */
+  #d2 .hero{ background:#0f3a4d; }
+  #d2 .sun{ position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle at 50% 50%, #e8763b, #d8542a); right:-60px; top:-90px; opacity:.92; }
+  #d2 .wm{ font-family:'Fraunces',serif; font-weight:600; font-size:104px; color:#f6ecd9; line-height:1; position:relative; letter-spacing:-.01em; }
+  #d2 .wm i{ font-style:italic; color:#f0a96a; }
+  #d2 .tag{ font-family:'Fraunces',serif; font-style:italic; color:#bfd6cf; font-size:20px; margin-top:14px; position:relative; }
+  #d2 .meta{ background:#123a4d; }
+  #d2 .display-s{ font-family:'Fraunces',serif; font-weight:600; }
+  #d2 .body-s{ font-family:'Hanken Grotesk',sans-serif; }
+
+  /* ===== 3. CONSEJO / IVY ===== */
+  #d3 .hero{ background:#14233f; text-align:center; }
+  #d3 .crest{ display:inline-block; border:1px solid rgba(201,162,75,.55); border-radius:4px; padding:30px 46px; position:relative; }
+  #d3 .crest::before,#d3 .crest::after{ content:''; position:absolute; left:18px; right:18px; height:1px; background:rgba(201,162,75,.4); }
+  #d3 .crest::before{ top:10px; } #d3 .crest::after{ bottom:10px; }
+  #d3 .wm{ font-family:'Playfair Display',serif; font-weight:900; font-size:92px; color:#f3efe6; line-height:1; letter-spacing:.01em; }
+  #d3 .wm span{ color:#c9a24b; }
+  #d3 .est{ font-family:'Newsreader',serif; letter-spacing:.42em; text-transform:uppercase; font-size:12px; color:#c9a24b; margin-bottom:14px; }
+  #d3 .tag{ font-family:'Newsreader',serif; font-style:italic; color:#aeb6c4; font-size:18px; margin-top:18px; }
+  #d3 .meta{ background:#16253f; }
+  #d3 .display-s{ font-family:'Playfair Display',serif; font-weight:700; }
+  #d3 .body-s{ font-family:'Newsreader',serif; }
+
+  /* ===== 4. PITCH (neo-brutal) ===== */
+  #d4 .hero{ background:#ffe600; color:#0b0b0e; padding:56px 48px; }
+  #d4 .wm{ font-family:'Archivo',sans-serif; font-weight:900; font-size:110px; line-height:.92; letter-spacing:-.03em; color:#111; text-transform:uppercase; }
+  #d4 .badge{ display:inline-block; background:#0b0b0e; color:#ffe600; font-family:'Space Mono',monospace; font-weight:700; font-size:14px; letter-spacing:.1em; padding:8px 14px; border-radius:4px; transform:rotate(-2deg); margin-bottom:18px; }
+  #d4 .tag{ font-family:'Space Mono',monospace; font-weight:700; color:#111; font-size:14px; margin-top:18px; border-top:3px solid #111; display:inline-block; padding-top:10px; }
+  #d4 .meta{ background:#15151a; }
+  #d4 .display-s{ font-family:'Archivo',sans-serif; font-weight:900; text-transform:uppercase; }
+  #d4 .body-s{ font-family:'Archivo',sans-serif; font-weight:500; }
+
+  .foot{ padding:80px 0 120px; text-align:center; border-top:1px solid #1c1c22; }
+  .foot p{ color:#9a9aa2; font-size:16px; }
+  .foot .pick{ font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(26px,4vw,40px); color:#fff; margin-bottom:14px; letter-spacing:-.01em; }
+  @media(max-width:680px){ .meta{ grid-template-columns:1fr; } .stage .hero{ padding:44px 26px; } }
+</style>
+</head>
+<body>
+
+  <header class="page intro">
+    <div class="kicker">YEP · Young Entrepreneurship Program</div>
+    <h1>Cuatro direcciones<br/>de identidad.</h1>
+    <p>Cada una es un sistema coherente: logo, paleta y tipografía aplicados al mismo programa. Recorrelas y elegí la que mejor representa la energía que querés transmitir. Después desarrollo el sistema completo.</p>
+    <nav class="nav">
+      <a href="#d1">01 · Launchpad</a>
+      <a href="#d2">02 · Mediterráneo</a>
+      <a href="#d3">03 · El Consejo</a>
+      <a href="#d4">04 · Pitch</a>
+    </nav>
+  </header>
+
+  <!-- ===== 1 ===== -->
+  <section class="opt page" id="d1">
+    <div class="opt-head"><span class="opt-num">01</span><span class="opt-name">Launchpad</span></div>
+    <p class="opt-vibe">Startup moderno, Silicon Valley. Negro tinta + verde eléctrico, tipografía grotesca audaz. Energía de aceleradora: ambición, velocidad, futuro.</p>
+    <div class="stage">
+      <div class="hero">
+        <div class="glow"></div>
+        <div class="wm">Y<b>E</b>P<span class="dot"></span></div>
+        <div class="tag">// BUILD · VALIDATE · PITCH</div>
+      </div>
+      <div class="meta">
+        <div>
+          <div class="lbl">Paleta</div>
+          <div class="swatches"><span style="background:#0b0b0e"></span><span style="background:#1b1c22"></span><span style="background:#d6ff3f"></span><span style="background:#f4f4f0"></span></div>
+        </div>
+        <div>
+          <div class="lbl">Tipografía</div>
+          <div class="type-row"><div class="big display-s" style="color:#d6ff3f">Bricolage Grotesque</div><div class="small body-s" style="color:#f4f4f0">Hanken Grotesk · texto y datos</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2 ===== -->
+  <section class="opt page" id="d2">
+    <div class="opt-head"><span class="opt-num">02</span><span class="opt-name">Mediterráneo</span></div>
+    <p class="opt-vibe">Calidez israelí + innovación. Azul mar profundo, terracota y arena. Serif moderna y suave. Conecta el viaje a Israel con un espíritu humano y cálido, no corporativo frío.</p>
+    <div class="stage">
+      <div class="hero">
+        <div class="sun"></div>
+        <div class="wm">Y<i>e</i>p</div>
+        <div class="tag">De la idea al pitch — y a Tel Aviv.</div>
+      </div>
+      <div class="meta">
+        <div>
+          <div class="lbl">Paleta</div>
+          <div class="swatches"><span style="background:#0f3a4d"></span><span style="background:#d8542a"></span><span style="background:#f0a96a"></span><span style="background:#f6ecd9"></span></div>
+        </div>
+        <div>
+          <div class="lbl">Tipografía</div>
+          <div class="type-row"><div class="big display-s" style="color:#f6ecd9">Fraunces <i style="color:#f0a96a">italic</i></div><div class="small body-s" style="color:#bfd6cf">Hanken Grotesk · texto</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3 ===== -->
+  <section class="opt page" id="d3">
+    <div class="opt-head"><span class="opt-num">03</span><span class="opt-name">El Consejo</span></div>
+    <p class="opt-vibe">Prestigio y seriedad: estética de institución, club de inversores, Ivy League. Azul marino, dorado y crema con serif editorial. Transmite peso, confianza y un programa que importa.</p>
+    <div class="stage">
+      <div class="hero">
+        <div class="crest">
+          <div class="est">Est. 2026 · North Miami</div>
+          <div class="wm">Y<span>E</span>P</div>
+        </div>
+        <div class="tag">Young Entrepreneurship Program</div>
+      </div>
+      <div class="meta">
+        <div>
+          <div class="lbl">Paleta</div>
+          <div class="swatches"><span style="background:#14233f"></span><span style="background:#c9a24b"></span><span style="background:#aeb6c4"></span><span style="background:#f3efe6"></span></div>
+        </div>
+        <div>
+          <div class="lbl">Tipografía</div>
+          <div class="type-row"><div class="big display-s" style="color:#f3efe6">Playfair Display</div><div class="small body-s" style="color:#c9a24b">Newsreader · texto editorial</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4 ===== -->
+  <section class="opt page" id="d4">
+    <div class="opt-head"><span class="opt-num">04</span><span class="opt-name">Pitch</span></div>
+    <p class="opt-vibe">Joven, atrevido, neo-brutalista. Amarillo de alto voltaje, negro absoluto, bordes gruesos y monospace. Hecho para adolescentes de 16-17: ruidoso, divertido, imposible de ignorar. Ideal para el flyer y redes.</p>
+    <div class="stage">
+      <div class="hero">
+        <div class="badge">SHARK TANK · JCC AVENTURA</div>
+        <div class="wm">YEP</div>
+        <div class="tag">GOT AN IDEA? → SAY YEP.</div>
+      </div>
+      <div class="meta">
+        <div>
+          <div class="lbl">Paleta</div>
+          <div class="swatches"><span style="background:#ffe600"></span><span style="background:#0b0b0e"></span><span style="background:#ff4d2e"></span><span style="background:#2e6bff"></span></div>
+        </div>
+        <div>
+          <div class="lbl">Tipografía</div>
+          <div class="type-row"><div class="big display-s" style="color:#ffe600">ARCHIVO BLACK</div><div class="small body-s" style="color:#e9e9ec">Space Mono · acentos y datos</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page foot">
+    <div class="pick">¿Cuál te representa?</div>
+    <p>Decime el número (01–04) o mezclá ideas de varias.<br/>Desarrollo el sistema completo: logo en variantes, paleta con códigos, tipografía, componentes y un flyer de muestra.</p>
+  </footer>
+
+</body>
+</html>

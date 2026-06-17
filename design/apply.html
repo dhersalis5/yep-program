@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Apply — YEP · Young Entrepreneurship Program</title>
+<meta name="description" content="Apply to YEP — a selective entrepreneurship program for teens in Miami." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f4f1e7; --paper2:#ece7d8; --card:#fbfaf4; --line:#ddd7c6; --line2:#cbc4af;
+    --ink:#181810; --ink-soft:#56544a; --ink-faint:#8a877a;
+    --lime:#cdf03a; --lime-deep:#5f7a0c;
+    --teal:#1f9b8a; --teal-deep:#0f6e62;
+    --dark:#14140e; --danger:#b3411f;
+    --maxw:760px;
+    --disp:'Bricolage Grotesque',sans-serif;
+    --body:'Hanken Grotesk',sans-serif;
+    --mono:'Space Mono',monospace;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ background:var(--paper); color:var(--ink); font-family:var(--body); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+
+  /* nav */
+  nav{ border-bottom:1px solid var(--line); background:var(--paper); }
+  .nav-in{ max-width:1120px; margin:0 auto; padding:0 28px; height:70px; display:flex; align-items:center; justify-content:space-between; }
+  .brand{ display:flex; align-items:center; gap:16px; }
+  .yep{ font-family:var(--disp); font-weight:800; font-size:27px; letter-spacing:-.03em; }
+  .yep .e{ color:var(--lime-deep); }
+  .pres{ display:flex; align-items:center; gap:10px; padding-left:16px; border-left:1px solid var(--line2); }
+  .pres span{ font-family:var(--mono); font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); line-height:1.35; }
+  .pres img{ height:30px; display:block; }
+  .back{ font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); text-decoration:none; }
+  .back:hover{ color:var(--ink); }
+  @media(max-width:620px){ .pres span{ display:none; } }
+
+  /* head */
+  header.top{ padding:64px 0 30px; }
+  .status{ display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal-deep); background:rgba(31,155,138,.1); border:1px solid rgba(31,155,138,.3); padding:7px 14px; border-radius:999px; }
+  .dot{ width:8px; height:8px; border-radius:50%; background:var(--teal); }
+  h1{ font-family:var(--disp); font-weight:800; font-size:clamp(38px,6.5vw,60px); line-height:1.02; letter-spacing:-.03em; margin:22px 0 14px; }
+  .sub{ color:var(--ink-soft); font-size:18px; max-width:560px; }
+  .sub b{ color:var(--ink); font-weight:600; }
+
+  /* form */
+  form{ padding:24px 0 90px; }
+  .group{ margin-top:34px; }
+  .group-label{ font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--lime-deep); padding-bottom:12px; margin-bottom:22px; border-bottom:1px solid var(--line2); display:flex; align-items:center; gap:10px; }
+  .group-label .n{ color:var(--ink-faint); }
+  .field{ margin-bottom:22px; }
+  .field.row2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media(max-width:560px){ .field.row2{ grid-template-columns:1fr; } }
+  label{ display:block; font-size:15px; font-weight:600; margin-bottom:7px; }
+  label .opt{ font-weight:400; color:var(--ink-faint); font-size:13px; }
+  .hint{ font-size:13.5px; color:var(--ink-soft); margin:-3px 0 9px; }
+  input, select, textarea{
+    width:100%; font-family:var(--body); font-size:15.5px; color:var(--ink);
+    background:var(--card); border:1px solid var(--line2); border-radius:10px;
+    padding:12px 14px; transition:.15s; outline:none;
+  }
+  textarea{ resize:vertical; min-height:96px; line-height:1.55; }
+  input:focus, select:focus, textarea:focus{ border-color:var(--ink); box-shadow:0 0 0 3px rgba(205,240,58,.4); }
+  input::placeholder, textarea::placeholder{ color:#b1ada0; }
+  select{ appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2356544a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 14px center; padding-right:38px; }
+
+  .check{ display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--line2); border-radius:12px; padding:16px 18px; cursor:pointer; }
+  .check input{ width:auto; margin-top:3px; flex:none; accent-color:var(--lime-deep); }
+  .check span{ font-size:14.5px; color:var(--ink-soft); }
+  .check span b{ color:var(--ink); font-weight:600; }
+
+  .submit-row{ margin-top:36px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .btn{ font-family:var(--body); font-weight:700; font-size:16px; cursor:pointer; border:none; border-radius:10px; padding:14px 26px; transition:.18s; background:var(--ink); color:var(--lime); }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn:disabled{ opacity:.55; cursor:not-allowed; transform:none; }
+  .formnote{ font-family:var(--mono); font-size:12px; color:var(--ink-faint); }
+  .err{ display:none; margin-top:18px; background:rgba(179,65,31,.08); border:1px solid rgba(179,65,31,.35); color:var(--danger); border-radius:10px; padding:12px 15px; font-size:14px; }
+
+  /* success */
+  .success{ display:none; padding:80px 0 110px; text-align:center; }
+  .success .badge{ width:62px; height:62px; border-radius:50%; background:var(--lime); display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-family:var(--disp); font-weight:800; font-size:30px; color:var(--ink); }
+  .success h2{ font-family:var(--disp); font-weight:800; font-size:clamp(32px,5vw,46px); letter-spacing:-.03em; }
+  .success p{ color:var(--ink-soft); font-size:18px; max-width:480px; margin:16px auto 30px; }
+  .success a{ font-family:var(--body); font-weight:700; font-size:15px; text-decoration:none; border:1px solid var(--line2); border-radius:10px; padding:12px 22px; display:inline-block; }
+  .success a:hover{ border-color:var(--ink); }
+</style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-in">
+      <div class="brand">
+        <div class="yep">Y<span class="e">E</span>P</div>
+        <div class="pres">
+          <span>Powered<br/>by</span>
+          <img src="assets/marjcc-logo.png" alt="Michael-Ann Russell JCC" />
+        </div>
+      </div>
+      <a class="back" href="index.html">← Back to home</a>
+    </div>
+  </nav>
+
+  <div id="form-view">
+    <header class="top">
+      <div class="wrap">
+        <div class="status"><span class="dot"></span> Applications open · Cohort 01</div>
+        <h1>Apply to YEP.</h1>
+        <p class="sub">Spots are limited and every application is read by hand. Be honest and specific — we're looking for <b>teens who'll show up and do the work</b>, not perfect résumés.</p>
+      </div>
+    </header>
+
+    <form id="apply-form" class="wrap" novalidate>
+
+      <div class="group">
+        <div class="group-label"><span class="n">01</span> About you</div>
+        <div class="field row2">
+          <div><label for="full_name">Full name</label><input id="full_name" name="full_name" type="text" required placeholder="Your name" /></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@email.com" /></div>
+        </div>
+        <div class="field row2">
+          <div><label for="phone">Phone <span class="opt">(optional)</span></label><input id="phone" name="phone" type="tel" placeholder="+1 ..." /></div>
+          <div><label for="age">Age</label><input id="age" name="age" type="text" placeholder="16 / 17" /></div>
+        </div>
+        <div class="field">
+          <label for="school">School</label>
+          <input id="school" name="school" type="text" placeholder="Your school" />
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label"><span class="n">02</span> Your motivation</div>
+        <div class="field">
+          <label for="why">Why is this program important to you?</label>
+          <p class="hint">Tell us what's pulling you in. There's no right answer.</p>
+          <textarea id="why" name="why" required placeholder="Write a few honest sentences..."></textarea>
+        </div>
+        <div class="field row2">
+          <div>
+            <label for="commitment">What level of commitment can you take on?</label>
+            <select id="commitment" name="commitment">
+              <option value="">Select...</option>
+              <option>All in — this is a priority for me</option>
+              <option>High — I'll make it work around school</option>
+              <option>Moderate — I want to, but I have a lot on</option>
+            </select>
+          </div>
+          <div>
+            <label for="hours">Hours per week you'll dedicate</label>
+            <select id="hours" name="hours">
+              <option value="">Select...</option>
+              <option>1–2 hours</option>
+              <option>3–4 hours</option>
+              <option>5+ hours</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label"><span class="n">03</span> You as a builder</div>
+        <div class="field">
+          <label for="strengths">3 strengths you already have</label>
+          <input id="strengths" name="strengths" type="text" placeholder="e.g. persistent, good with people, creative" />
+        </div>
+        <div class="field">
+          <label for="develop">3 things you want to develop</label>
+          <input id="develop" name="develop" type="text" placeholder="e.g. public speaking, sales, focus" />
+        </div>
+        <div class="field">
+          <label for="track_record">Track record <span class="opt">(any entrepreneurial experience — or an idea you've had)</span></label>
+          <p class="hint">Never built anything? No problem. Tell us about an idea you couldn't stop thinking about.</p>
+          <textarea id="track_record" name="track_record" placeholder="A project, a side hustle, a problem you noticed..."></textarea>
+        </div>
+        <div class="field">
+          <label for="teammates">Anyone you'd like to build a team with? <span class="opt">(optional)</span></label>
+          <input id="teammates" name="teammates" type="text" placeholder="Names — or leave blank and we'll help you find a team" />
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="group-label"><span class="n">04</span> The commitment</div>
+        <label class="check">
+          <input type="checkbox" id="agree" name="agree" />
+          <span>I understand YEP meets <b>weekly for one semester</b>, that I'm expected to show up, and that <b>missing more than 10% of sessions</b> means leaving the cohort.</span>
+        </label>
+      </div>
+
+      <div class="submit-row">
+        <button class="btn" type="submit" id="submit-btn">Submit application →</button>
+        <span class="formnote">Takes ~5 minutes · Rolling review</span>
+      </div>
+      <div class="err" id="err"></div>
+    </form>
+  </div>
+
+  <div class="success" id="success-view">
+    <div class="wrap">
+      <div class="badge">✓</div>
+      <h2>You said YEP.</h2>
+      <p>Your application is in. We read every one — if you're a fit, we'll reach out by email with next steps. Keep an eye on your inbox.</p>
+      <a href="index.html">Back to home</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("apply-form");
+    const btn = document.getElementById("submit-btn");
+    const errBox = document.getElementById("err");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      errBox.style.display = "none";
+      const data = {
+        full_name: form.full_name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        age: form.age.value.trim(),
+        school: form.school.value.trim(),
+        why: form.why.value.trim(),
+        commitment: form.commitment.value,
+        hours: form.hours.value,
+        strengths: form.strengths.value.trim(),
+        develop: form.develop.value.trim(),
+        track_record: form.track_record.value.trim(),
+        teammates: form.teammates.value.trim(),
+        agree: form.agree.checked,
+      };
+      if (!data.full_name || !data.email || !data.why) {
+        return showErr("Please fill in your name, email and why this matters to you.");
+      }
+      if (!data.agree) {
+        return showErr("Please confirm you understand the weekly commitment.");
+      }
+      btn.disabled = true;
+      btn.textContent = "Submitting...";
+      try {
+        const res = await fetch("/api/apply", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json();
+        if (!res.ok || !json.ok) throw new Error(json.error || "Something went wrong");
+        document.getElementById("form-view").style.display = "none";
+        document.getElementById("success-view").style.display = "block";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (err) {
+        showErr("We couldn't submit your application. Please try again in a moment.");
+        btn.disabled = false;
+        btn.textContent = "Submit application →";
+      }
+    });
+
+    function showErr(msg) {
+      errBox.textContent = msg;
+      errBox.style.display = "block";
+    }
+  </script>
+</body>
+</html>
