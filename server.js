@@ -6,6 +6,7 @@ import { init, insertApplication, getApplications } from "./db.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 3000;
+const IS_PROD = !!process.env.DATABASE_URL;
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "dev-token";
 
 app.use(express.json({ limit: "100kb" }));
@@ -38,6 +39,11 @@ app.post("/api/apply", async (req, res) => {
 
 // --- Admin: view + export submissions (protected by ADMIN_TOKEN) ---
 function checkAuth(req, res) {
+  // In production, refuse to run without an explicit ADMIN_TOKEN (never the dev fallback).
+  if (IS_PROD && !process.env.ADMIN_TOKEN) {
+    res.status(503).json({ ok: false, error: "Admin disabled: ADMIN_TOKEN not set" });
+    return false;
+  }
   const token = req.query.token || req.get("x-admin-token");
   if (token !== ADMIN_TOKEN) {
     res.status(401).json({ ok: false, error: "Unauthorized" });
